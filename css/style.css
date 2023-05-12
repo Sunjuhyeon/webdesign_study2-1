@@ -1,0 +1,98 @@
+*{ margin: 0; padding: 0;}
+ul, li {
+    list-style: none;
+}
+a{ color:#222; text-decoration: none;}
+
+.container{
+    width:1200px; margin: 0 auto;
+}
+
+
+.position-absolute{
+    position: absolute;
+}
+.position-relative{
+    position: relative;
+}
+
+.d-block{
+    display: block;
+}
+.d-inline-block{
+    display: inline-block;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+.mx-auto{
+    margin: 0 auto;
+}
+
+/* 오로지 웹기능사에서만 */
+.h100{
+    height: 100px;
+}
+.h300{
+    height: 300px;
+}
+.h200{ height: 200px;}
+
+
+.d1a{ /*대메뉴 a*/
+
+    font-size: 22px;
+    padding: 20px;
+}
+.d2ul{ /*소메뉴 박스*/
+    background-color: white;
+    height:0;
+    overflow: hidden;
+    transition: 0.5s; 
+}
+.d2ul:before{
+    content: "";
+    display: block;
+    height: 15px;
+}
+.d2ul:after{
+    content: "";
+    display: block;
+    height: 15px;
+}
+
+.d2ul li{ /*소메뉴 리스트*/
+    line-height:35px; /*한줄간격 height 가 아닌 line-height로 한 이유????? 글자가 있으니깐*/
+}
+.d1li:hover .d2ul{
+    height: calc( 35px * 3 + 30px);
+}
+.d1li0:hover .d2ul{
+    height: calc(35px * 5 + 30px);
+}
+.d1li2:hover .d2ul{
+    height: calc(35px * 2 + 30px);
+}
+.d1li:hover .d1a{
+    color: blueviolet;
+}
+.d2ul a{
+    display: block;
+    text-align: center;
+    padding: 0 15px;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+.d1li0, .d2ul{
+    left: -25px;
+}

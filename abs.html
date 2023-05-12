@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abs{ position: absolute;}
+        .bg-yellow{ background-color: yellow; }
+        /* .round50{ border-radius: 50%; } */
+        .mother{
+            width:50vh; height:50vh;  left:50%; top:50%;
+            margin-left:-25vh; margin-top:-25vh;
+            display: flex; /* relative한테만 적용 */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }        
+        .leftchild, .rightchild{
+            width:50%; height:50%; top:50%; margin-top:-25%; background-color:black; transition: 0.5s;
+            transform: rotate(45deg);
+        }
+        .leftchild{ left:0; }
+        .rightchild{  right:0;   }
+        .mother:hover .leftchild{
+            transform: translateX(-100%) rotate(45deg); background-color: black;
+        }
+        .mother:hover .rightchild{
+            transform: translateX(100%); background-color: black;
+        }
+        .mother:after{  content: "NCS"; /*가상선택자 :after, :before 에 필수 스타일 */
+            color:black; display: block; font-size: 5vw;
+        }
+
+    </style>
+</head>
+<body>   
+   <div class="mother   bg-yellow  round50  abs">
+        <div class="leftchild   round50 abs"></div>
+        <div class="rightchild   round50 abs"></div>
+   </div>
+</body>
+</html>
